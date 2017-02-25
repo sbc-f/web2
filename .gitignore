@@ -1,7 +1,12 @@
 .settings
 .project
 .classpath
-target
+target/classes/com
+target/classes/templates
+target/classes/application.yml
+target/classes/MANIFEST.MF
+target/classes/maven
+target/test-classes
 .env
 .idea/
 *.iml
