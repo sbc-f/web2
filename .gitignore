@@ -4,8 +4,8 @@
 target/classes/com
 target/classes/templates
 target/classes/application.yml
-target/classes/MANIFEST.MF
-target/classes/maven
+target/classes/META-INF/MANIFEST.MF
+target/classes/META-INF//maven
 target/test-classes
 .env
 .idea/
