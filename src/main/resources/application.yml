@@ -1,0 +1,24 @@
+#spring:
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/postgres
+#    driverClassName: org.postgresql.Driver
+#    username: postgres
+#    password: sbc_web_2017
+spring:
+  datasource:
+    url: jdbc:postgresql://ec2-54-235-168-152.compute-1.amazonaws.com:5432/dfp7kapma5166a?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
+    driverClassName: org.postgresql.Driver
+    username: kkitmovlaqfpml
+    password: a549ac1b7b7ed3b87b8c2e44b71233b0055309625b3807a1b6df6ada56c8aedd
+
+# http://doma.seasar.org/apidocs/index.html?org/seasar/doma/jdbc/
+doma:
+  dialect: postgres
+  sql-file-repository: no_cache
+
+# プーリング
+spring.datasource.tomcat:
+    maxActive: 15
+    maxIdle: 10
+    minIdle: 5
+    initialSize: 2

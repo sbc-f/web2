@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8"/>
+	<title>calc</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script>
+	$(function() {
+		/*
+			計算(Ajax)ボタンクリック
+		*/
+		$("#calcAjax").click(function(){
+			console.log("Ajax実行");
+			$.ajax({
+				url: "/calc2",
+				type: "POST",
+				data: {
+					val1: form.val1.value,
+					val2: form.val2.value
+				},
+				dataType: "text",
+				success: function(data){
+					console.log("成功、値：" + data);
+					$("#ans").text(data);
+				}
+			});
+		});
+	});
+	</script>
+</head>
+<body>
+	<h3>WEBプログラミング入門 計算ページ</h3>
+
+	<form th:action="@{/calc}" method="POST" th:object="${form}" name="form">
+		<input type="text" th:field="*{val1}" /> +
+		<input type="text" th:field="*{val2}" />
+		= <span th:text="${ans}" id="ans"></span>
+		<br/><br/>
+		<input type="submit" value="計算" />
+	</form>
+	<br />
+	<button id="calcAjax">計算(Ajax)</button>
+</body>
+</html>
