@@ -66,15 +66,30 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version><!--$NO-MVN-MAN-VER$-->
 				<executions>
 					<execution>
-						<id>copy-template</id>
-						<phase>initialize</phase>
+						<id>default-compile</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>compile</goal>
+						</goals>
 						<configuration>
-							<target>
-								<echo message="!!! maven de copy !!!" />
-							</target>
+							<tasks>
+								<echo message="!!!!!!!!!!!!!!!!!!!!! compile !!!!!!!!!!!!!!!!!!!!!!" />
+							</tasks>
 						</configuration>
+					</execution>
+					<execution>
+						<id>default-testCompile</id>
+						<phase>test-compile</phase>
+						<goals>
+							<goal>testCompile</goal>
+						</goals>
 					</execution>
 				</executions>
 			</plugin>
