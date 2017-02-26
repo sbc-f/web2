@@ -66,8 +66,19 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy-template</id>
+						<phase>initialize</phase>
+						<configuration>
+							<target>
+								<echo message="!!! maven de copy !!!" />
+							</target>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
-	
+
 </project>
