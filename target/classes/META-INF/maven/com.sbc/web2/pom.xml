@@ -72,7 +72,7 @@
 			<resource>
 				<directory>${project.basedir}/src/main/resource/</directory>
 				<includes>
-					<include>**/*</include>
+					<include>**/*.html</include>
 				</includes>
 			</resource>
 		</resources>
