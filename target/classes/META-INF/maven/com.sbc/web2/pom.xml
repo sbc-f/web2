@@ -69,17 +69,43 @@
 					<include>**/*.sql</include>
 				</includes>
 			</resource>
+			<!--
 			<resource>
 				<directory>${project.basedir}/src/main/resource/</directory>
 				<includes>
 					<include>**/*.html</include>
 				</includes>
 			</resource>
+			-->
 		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+
+			<!-- for resources copy -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy-resources</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<resources>
+								<resource>
+									<directory>${project.basedir}/src/main/resource/</directory>
+									<filtering>false</filtering>
+								</resource>
+							</resources>
+							<outputDirectory>${project.build.directory}/classes</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
