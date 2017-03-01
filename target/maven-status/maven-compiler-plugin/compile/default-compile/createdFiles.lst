@@ -1,9 +1,0 @@
-com\sbc\web2\dao\TodoDaoImpl.class
-com\sbc\web2\entity\TodoEntity.class
-com\sbc\web2\entity\_TodoEntity.class
-com\sbc\web2\service\TodoService.class
-com\sbc\web2\App.class
-com\sbc\web2\form\CalcForm.class
-com\sbc\web2\dao\TodoDao.class
-com\sbc\web2\entity\_TodoEntity$ListenerHolder.class
-com\sbc\web2\AppController.class
