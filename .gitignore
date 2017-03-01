@@ -1,7 +1,6 @@
 /.settings
-.project
-.classpath
 /target/
 .env
 .idea/
 *.iml
+.factorypath
