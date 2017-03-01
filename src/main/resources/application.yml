@@ -1,15 +1,9 @@
-#spring:
-#  datasource:
-#    url: jdbc:postgresql://localhost:5432/postgres
-#    driverClassName: org.postgresql.Driver
-#    username: postgres
-#    password: sbc_web_2017
 spring:
   datasource:
-    url: jdbc:postgresql://ec2-50-19-116-106.compute-1.amazonaws.com:5432/dk6mp78qto7r9?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
+    url: jdbc:postgresql://xxxxxxxxxx:5432/xxxxxxxxxx?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
     driverClassName: org.postgresql.Driver
-    username: omqbkzurdtxgbb
-    password: d1961c9e024da02af447b4ae8b654c803ef3edae9b1bd73d692ac9e534c59f7e
+    username: xxxxxxxxxx
+    password: xxxxxxxxxx
 
 # http://doma.seasar.org/apidocs/index.html?org/seasar/doma/jdbc/
 doma:
