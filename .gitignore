@@ -1,10 +1,7 @@
 /.settings
 .project
 .classpath
-/target/test-classes
-/target/classes/com
-/target/classes/templates
-/target/classes/application.yml
+/target/
 .env
 .idea/
 *.iml
