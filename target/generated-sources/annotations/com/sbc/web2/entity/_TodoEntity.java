@@ -1,7 +1,7 @@
 package com.sbc.web2.entity;
 
 /** */
-@javax.annotation.Generated(value = { "Doma", "2.12.0" }, date = "2017-02-26T14:37:39.115+0900")
+@javax.annotation.Generated(value = { "Doma", "2.12.0" }, date = "2017-03-01T21:17:34.984+0900")
 public final class _TodoEntity extends org.seasar.doma.jdbc.entity.AbstractEntityType<com.sbc.web2.entity.TodoEntity> {
 
     static {

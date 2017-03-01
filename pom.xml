@@ -62,22 +62,6 @@
 	</dependencies>
 
 	<build>
-		<resources>
-			<resource>
-				<directory>${project.basedir}/src/main/java/</directory>
-				<includes>
-					<include>**/*.sql</include>
-				</includes>
-			</resource>
-			<!--
-			<resource>
-				<directory>${project.basedir}/src/main/resource/</directory>
-				<includes>
-					<include>**/*.html</include>
-				</includes>
-			</resource>
-			-->
-		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -91,18 +75,18 @@
 				<executions>
 					<execution>
 						<id>copy-resources</id>
-						<phase>compile</phase>
+						<phase>validate</phase>
 						<goals>
 							<goal>copy-resources</goal>
 						</goals>
 						<configuration>
 							<resources>
 								<resource>
-									<directory>${project.basedir}/src/main/resource/</directory>
+									<directory>src/main/java/META-INF</directory>
 									<filtering>false</filtering>
 								</resource>
 							</resources>
-							<outputDirectory>${project.build.directory}/classes</outputDirectory>
+							<outputDirectory>${basedir}/target/classes/META-INF</outputDirectory>
 						</configuration>
 					</execution>
 				</executions>

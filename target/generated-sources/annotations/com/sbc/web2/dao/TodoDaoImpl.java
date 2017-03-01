@@ -2,7 +2,7 @@ package com.sbc.web2.dao;
 
 /** */
 @org.springframework.stereotype.Repository()
-@javax.annotation.Generated(value = { "Doma", "2.12.0" }, date = "2017-02-26T14:37:39.290+0900")
+@javax.annotation.Generated(value = { "Doma", "2.12.0" }, date = "2017-03-01T21:17:35.141+0900")
 public class TodoDaoImpl extends org.seasar.doma.internal.jdbc.dao.AbstractDao implements com.sbc.web2.dao.TodoDao {
 
     static {
