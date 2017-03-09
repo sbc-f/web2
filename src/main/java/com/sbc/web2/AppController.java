@@ -18,12 +18,6 @@ import com.sbc.web2.service.TodoService;
 public class AppController {
 
 	//-------------------------
-	// DI
-	//-------------------------
-	@Autowired
-	TodoService todoService;
-
-	//-------------------------
 	// 画面
 	//-------------------------
 	@RequestMapping("/")
@@ -57,18 +51,6 @@ public class AppController {
 		// 値１と値２を足した結果を返却する
 		return calcLogic(form);
 	}
-
-	// ↓↓↓ 処理を追加 ↓↓↓
-	@RequestMapping("/todo")
-	public String todo(){
-
-		List<TodoEntity> todoList = todoService.getTodoList();
-		for(TodoEntity e : todoList){
-			System.out.println(e.getId() + ":" + e.getMemo());
-		}
-		return "todo";
-	}
-	// ↑↑↑ 処理を追加 ↑↑↑
 
 	/**
 	 * 値１と値２を足した結果を算出する
